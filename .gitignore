@@ -455,6 +455,8 @@ pip-log.txt
 fr.inria.atlanmod.neo4emf.codegen/fr/
 fr.inria.atlanmod.neo4emf.codegen/org/
 
+.project
+.settings
 
 ##
 # Maven files
