@@ -9,6 +9,12 @@
   
   <artifactId>fr.inria.atlanmod.neoemf.update</artifactId>
   <packaging>eclipse-repository</packaging>
+
+	<properties>
+		<updates>updates</updates>
+		<output-dir>output</output-dir>
+		<github.global.server>github</github.global.server>
+	</properties>
 	
 	<dependencies>
 		<dependency>
@@ -51,6 +57,30 @@
 	
 	<build>
 		<plugins>
+			<!--
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-p2-index</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.basedir}/target/repository</outputDirectory>
+							<resources>
+								<resource>
+									<directory>siteTemplate/</directory>
+									<filtering>false</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			-->
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-p2-repository-plugin</artifactId>
@@ -69,7 +99,129 @@
                     </execution>
                 </executions>
             </plugin>
+			<!--
+			<plugin>
+				<groupId>com.jakewharton</groupId>
+				<artifactId>github-deploy-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<replaceExisting>true</replaceExisting>
+					<ignoreTypes>
+						<ignoreType>java-source</ignoreType>
+					</ignoreTypes>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.12</version>
+				<configuration>
+					<message>Creating site for ${project.version}</message>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>site</phase>
+					</execution>
+				</executions>
+			</plugin>
+			-->
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-p2-extras-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-to-central-site</id>
+						<phase>install</phase>
+						<goals>
+							<goal>mirror</goal>
+						</goals>
+						<configuration>
+							<source>
+								<repository>
+									<url>${project.baseUri}/target/repository</url>
+									<layout>p2</layout>
+								</repository>
+							</source>
+							<publishArtifacts>true</publishArtifacts>
+							<destination>${updates}/${output-dir}/</destination>
+							<append>true</append>
+							<mirrorMetadataOnly>false</mirrorMetadataOnly>
+							<compress>false</compress>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.12</version>
+				<configuration>
+					<branch>refs/heads/mvn-repo</branch>
+					<includes>
+						<include>**/*</include>
+					</includes>
+					<message>Creating site for ${project.version}</message>
+					<outputDirectory>${updates}/${output-dir}/</outputDirectory>
+					<!--<path>${updates}/${output-dir}/</path>-->
+					<repositoryName>NeoEMF</repositoryName>
+					<repositoryOwner>timeraider4u</repositoryOwner>
+					<noJekyll>true</noJekyll>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
 		</plugins>
+	<!--
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-scm</artifactId>
+				<version>2.10</version>
+			</extension>
+			<extension>
+				<groupId>org.apache.maven.scm</groupId>
+				<artifactId>maven-scm-manager-plexus</artifactId>
+				<version>1.5</version>
+			</extension>
+			<extension>
+				<groupId>org.apache.maven.scm</groupId>
+				<artifactId>maven-scm-provider-gitexe</artifactId>
+				<version>1.5</version>
+			</extension>
+		</extensions>
+		-->
 	</build>
-  
+	<!--
+	<distributionManagement>
+		<site>
+			<id>github.com</id>
+			<url>scm:git:ssh://timeraider4u@github.com/timeraider4u/NeoEMF.git</url>
+		</site>
+	</distributionManagement>
+	-->
 </project>
