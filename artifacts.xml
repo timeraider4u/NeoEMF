@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
-<repository name='' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+<repository name='' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1459426947890'/>
+    <property name='p2.timestamp' value='1459564964796'/>
     <property name='publishPackFilesAsSiblings' value='true'/>
   </properties>
   <mappings size='5'>
@@ -12,48 +12,77 @@
     <rule filter='(&amp; (classifier=org.eclipse.update.feature) (format=packed))' output='${repoUrl}/features/${id}_${version}.jar.pack.gz'/>
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
-  <artifacts size='9'>
-    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.core' version='0.0.1.201603301904'>
+  <artifacts size='27'>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.graph.blueprints' version='0.0.1.201604020230'>
       <properties size='6'>
-        <property name='artifact.size' value='4165440'/>
-        <property name='download.size' value='4165440'/>
-        <property name='download.md5' value='39ce95819a2b6c72b23663172f7ab4f0'/>
+        <property name='artifact.size' value='4454332'/>
+        <property name='download.size' value='4454332'/>
+        <property name='download.md5' value='b927c2bbf5d1ee5d7f4420d14a2c4f31'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='graph.blueprints'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.core' version='0.0.1.201604020229'>
+      <properties size='6'>
+        <property name='artifact.size' value='4165438'/>
+        <property name='download.size' value='4165438'/>
+        <property name='download.md5' value='9e92a5b1594f6055e1b94866340c3ea5'/>
         <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
         <property name='maven-artifactId' value='core'/>
         <property name='maven-version' value='0.0.1-SNAPSHOT'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.graph.blueprints.neo4j' version='0.0.1.201603301905'>
+    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.graph.blueprints.feature' version='0.0.1.201604020127'>
       <properties size='6'>
-        <property name='artifact.size' value='12391553'/>
-        <property name='download.size' value='12391553'/>
-        <property name='download.md5' value='1ac765eced2fb87080f61149b34625d4'/>
+        <property name='artifact.size' value='6681'/>
+        <property name='download.size' value='6681'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.graph.blueprints.feature'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.graph.blueprints.implementations.feature' version='0.0.1.201604020242'>
+      <properties size='6'>
+        <property name='artifact.size' value='6783'/>
+        <property name='download.size' value='6783'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.graph.blueprints.implementations.feature'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.ui' version='0.0.1.201604020213'>
+      <properties size='5'>
+        <property name='artifact.size' value='376444'/>
+        <property name='download.size' value='376444'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.ui'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.graph.blueprints.neo4j' version='0.0.1.201604020204'>
+      <properties size='6'>
+        <property name='artifact.size' value='12391549'/>
+        <property name='download.size' value='12391549'/>
+        <property name='download.md5' value='eb746e1290cac9514e52a281e4ad5ea2'/>
         <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
         <property name='maven-artifactId' value='graph.blueprints.neo4j'/>
         <property name='maven-version' value='0.0.1-SNAPSHOT'/>
       </properties>
     </artifact>
-    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.core.feature' version='0.0.1.201603301913'>
+    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.core.feature' version='0.0.1.201604020242'>
       <properties size='6'>
-        <property name='artifact.size' value='6709'/>
-        <property name='download.size' value='6709'/>
+        <property name='artifact.size' value='6710'/>
+        <property name='download.size' value='6710'/>
         <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
         <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.core.feature'/>
         <property name='maven-version' value='0.0.1-SNAPSHOT'/>
         <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.map' version='0.0.1.201603301906'>
-      <properties size='6'>
-        <property name='artifact.size' value='2048683'/>
-        <property name='download.size' value='2048683'/>
-        <property name='download.md5' value='9ec22eb0fdd7f1fb845319f4bd219be0'/>
-        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
-        <property name='maven-artifactId' value='map'/>
-        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
-      </properties>
-    </artifact>
-    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.graph.blueprints.feature' version='0.0.1.201603301913'>
+    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.graph.blueprints.feature' version='0.0.1.201604020242'>
       <properties size='6'>
         <property name='artifact.size' value='6678'/>
         <property name='download.size' value='6678'/>
@@ -63,43 +92,192 @@
         <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>
-    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.graph.blueprints.implementations.feature' version='0.0.1.201603301913'>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.graph.blueprints.neo4j' version='0.0.1.201604020231'>
       <properties size='6'>
-        <property name='artifact.size' value='6785'/>
-        <property name='download.size' value='6785'/>
+        <property name='artifact.size' value='12391550'/>
+        <property name='download.size' value='12391550'/>
+        <property name='download.md5' value='357c6b6fe29f88e4914594e89514d18d'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='graph.blueprints.neo4j'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.core' version='0.0.1.201603311659'>
+      <properties size='6'>
+        <property name='artifact.size' value='4165441'/>
+        <property name='download.size' value='4165441'/>
+        <property name='download.md5' value='47cf1be831cf280ab4f95f50433bca7e'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='core'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.graph.blueprints.implementations.feature' version='0.0.1.201604020213'>
+      <properties size='6'>
+        <property name='artifact.size' value='6783'/>
+        <property name='download.size' value='6783'/>
         <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
         <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.graph.blueprints.implementations.feature'/>
         <property name='maven-version' value='0.0.1-SNAPSHOT'/>
         <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>
-    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.map.feature' version='0.0.1.201603301913'>
+    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.core.feature' version='0.0.1.201604020127'>
       <properties size='6'>
-        <property name='artifact.size' value='6535'/>
-        <property name='download.size' value='6535'/>
+        <property name='artifact.size' value='6716'/>
+        <property name='download.size' value='6716'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.core.feature'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.graph.blueprints.neo4j' version='0.0.1.201603311701'>
+      <properties size='6'>
+        <property name='artifact.size' value='12391553'/>
+        <property name='download.size' value='12391553'/>
+        <property name='download.md5' value='9bc2cf2d665bb42fb29424651e8234fb'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='graph.blueprints.neo4j'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.graph.blueprints.feature' version='0.0.1.201604020213'>
+      <properties size='6'>
+        <property name='artifact.size' value='6678'/>
+        <property name='download.size' value='6678'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.graph.blueprints.feature'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.map.feature' version='0.0.1.201604020242'>
+      <properties size='6'>
+        <property name='artifact.size' value='6533'/>
+        <property name='download.size' value='6533'/>
         <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
         <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.map.feature'/>
         <property name='maven-version' value='0.0.1-SNAPSHOT'/>
         <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.ui' version='0.0.1.201603301913'>
+    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.map.feature' version='0.0.1.201604020127'>
+      <properties size='6'>
+        <property name='artifact.size' value='6540'/>
+        <property name='download.size' value='6540'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.map.feature'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.graph.blueprints' version='0.0.1.201603311659'>
+      <properties size='6'>
+        <property name='artifact.size' value='4454336'/>
+        <property name='download.size' value='4454336'/>
+        <property name='download.md5' value='64ea92b7073cf397b6744ff12ae7dcc9'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='graph.blueprints'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.ui' version='0.0.1.201604020127'>
       <properties size='5'>
-        <property name='artifact.size' value='376445'/>
-        <property name='download.size' value='376445'/>
+        <property name='artifact.size' value='376444'/>
+        <property name='download.size' value='376444'/>
         <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
         <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.ui'/>
         <property name='maven-version' value='0.0.1-SNAPSHOT'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.graph.blueprints' version='0.0.1.201603301905'>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.map' version='0.0.1.201604020204'>
       <properties size='6'>
-        <property name='artifact.size' value='4454335'/>
-        <property name='download.size' value='4454335'/>
-        <property name='download.md5' value='cf5ebc7c754085f27e22656f1d23c6fd'/>
+        <property name='artifact.size' value='2048683'/>
+        <property name='download.size' value='2048683'/>
+        <property name='download.md5' value='03d590864c36fab18420bb45dace896a'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='map'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.ui' version='0.0.1.201604020242'>
+      <properties size='5'>
+        <property name='artifact.size' value='376444'/>
+        <property name='download.size' value='376444'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.ui'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.map.feature' version='0.0.1.201604020213'>
+      <properties size='6'>
+        <property name='artifact.size' value='6533'/>
+        <property name='download.size' value='6533'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.map.feature'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.graph.blueprints.implementations.feature' version='0.0.1.201604020127'>
+      <properties size='6'>
+        <property name='artifact.size' value='6786'/>
+        <property name='download.size' value='6786'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.graph.blueprints.implementations.feature'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.graph.blueprints' version='0.0.1.201604020202'>
+      <properties size='6'>
+        <property name='artifact.size' value='4454330'/>
+        <property name='download.size' value='4454330'/>
+        <property name='download.md5' value='15a8443d2636f828a89cdebe4d0eb6f9'/>
         <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
         <property name='maven-artifactId' value='graph.blueprints'/>
         <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.map' version='0.0.1.201603311701'>
+      <properties size='6'>
+        <property name='artifact.size' value='2048687'/>
+        <property name='download.size' value='2048687'/>
+        <property name='download.md5' value='24a6446ff21ae920a9718afdc6e93768'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='map'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.core' version='0.0.1.201604020202'>
+      <properties size='6'>
+        <property name='artifact.size' value='4165437'/>
+        <property name='download.size' value='4165437'/>
+        <property name='download.md5' value='bf0f38ba745d08600b71a16b8149c5a0'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='core'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='fr.inria.atlanmod.neoemf.map' version='0.0.1.201604020231'>
+      <properties size='6'>
+        <property name='artifact.size' value='2048685'/>
+        <property name='download.size' value='2048685'/>
+        <property name='download.md5' value='50eb5c017bee320d6f842904067c3115'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='map'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='fr.inria.atlanmod.neoemf.core.feature' version='0.0.1.201604020213'>
+      <properties size='6'>
+        <property name='artifact.size' value='6709'/>
+        <property name='download.size' value='6709'/>
+        <property name='maven-groupId' value='fr.inria.atlanmod.neoemf'/>
+        <property name='maven-artifactId' value='fr.inria.atlanmod.neoemf.core.feature'/>
+        <property name='maven-version' value='0.0.1-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>
   </artifacts>
